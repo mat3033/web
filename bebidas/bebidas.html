@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bebidas</title>
+    <!-- Cargar Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+
+    <link rel="stylesheet" href="staly 1.css">
+</head>
+<body style="background-image: url(grano-madera-oscuro-patron-natural-fondo-textura-tabla-marron_662214-309528.avif);">
+
+    <header class="ro">
+        <div class="header-container d-flex justify-content-between align-items-center">
+            <!-- Logotipo -->
+            <div class="logo">
+               <a href="paginas.html">
+                    <img src="tienda.png" alt="Logo" style="height: 50px;"> 
+                </a>
+            </div>
+            <!-- Barra de búsqueda -->
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Busca productos..." />
+                <button id="search-button">Buscar</button>
+            </div>
+            
+
+            <nav>
+                <!-- Aquí va tu contenido del header -->
+                <div class="header-cart">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+            
+        </div>
+        <nav class="nav-menu text-center mt-3">
+            <div class="dropdown">
+              <button class="dropdown-btn">Categorías</button>
+              <div class="dropdown-content">
+                    <a href="../paginas.html">Inicio</a>
+                  <a href="../carnes/carnes.html">Carnes</a>
+                  <a href="../lacteos/lacteos.html">Lacteos</a>
+                  
+              </div>
+          </div>
+          <button class="dropdown-btn"><a href="#catalogo">Catalogo</a></button>
+
+          <button class="dropdown-btn"><a href="#ofertas" class="mx-2">Ofertas</a></button> 
+          
+          <button class="dropdown-btn"><a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="mx-2">Contacto</a></button>
+          
+      </nav>
+    </header>
+   
+    <!-- Carrusel de imágenes (Principal) -->
+    <img src="https://i.ytimg.com/vi/1pIjElWQfkw/maxresdefault.jpg" width="100%" height="400px">
+
+   
+   <section id="catalogo">
+    <header class="bro">
+        <h1>Catálogo Bebidas</h1>
+    </header >
+
+    <!-- Cargar Bootstrap 5.3.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="product-list">
+            <div class="product" data-name="Coca Cola 3lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158031-600-600/Coca-Cola-Original-3-Lts-1-1873.jpg?v=637665429695430000" alt="Coca Cola 3lts">
+                <h3>Coca Cola 3lts</h3>
+                <p class="price">$10.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Coca Cola 3lts', 10.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Gaseosa Seven 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156124-600-600/Gaseosa-Seven-Up-3-Lts-1-405.jpg?v=637345693265830000" alt="Gaseosa Seven 3Lts">
+                <h3>Gaseosa Seven 3Lts</h3>
+                <p class="price">$12.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Gaseosa Seven 3Lts', 12.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Fanta 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156089-600-600/Gaseosa-Fanta-sabor-Naranja-3-Lts-1-399.jpg?v=637345693093370000" alt="Fanta 3Lts">
+                <h3>Fanta 3Lts</h3>
+                <p class="price">$15.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Fanta 3Lts', 15.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Pepsi 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156122-600-600/Gaseosa-Pepsi-3-Lts-1-381.jpg?v=637345693256130000" alt="Pepsi 3Lts">
+                <h3>Pepsi 3Lts</h3>
+                <p class="price">$9.99</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Pepsi 3Lts', 9.99)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Coca Cola 2Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156072-600-600/Gaseosa-sabor-Original-Coca-Cola-2-Lts-1-357.jpg?v=637345691861230000" alt="Coca Cola 2Lts">
+                <h3>Coca Cola 2Lts</h3>
+                <p class="price">$7.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Coca Cola 2Lts', 7.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Gaseosa Sprite 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156090-600-600/Gaseosa-Sprite-3-Lts-1-406.jpg?v=637345693094630000" alt="Gaseosa Sprite 3Lts">
+                <h3>Gaseosa Sprite 3Lts</h3>
+                <p class="price">$22.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Gaseosa Sprite 3Lts', 22.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Jugo Sabor Naranja 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156091-600-600/Jugo-sabor-Naranja-Citrus-Del-Valle-3-Lts-1-468.jpg?v=637345693096030000" alt="Jugo Sabor Naranja 3Lts">
+                <h3>Jugo Sabor Naranja 3Lts</h3>
+                <p class="price">$18.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Jugo Sabor Naranja 3Lts', 18.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Limon Mineragua 2Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156076-600-600/Gaseosa-Limon-Mineragua-2-Lts-1-403.jpg?v=637345691867970000" alt="Limon Mineragua 2Lts">
+                <h3>Limon Mineragua 2Lts</h3>
+                <p class="price">$14.30</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Limon Mineragua 2Lts', 14.30)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Gaseosa Guarana 3Lts">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156363-600-600/Gaseosa-Guarana-Antarctica-3-3-Lts-1-401.jpg?v=637345696198370000" alt="Gaseosa Guarana 3Lts">
+                <h3>Gaseosa Guarana 3Lts</h3>
+                <p class="price">$20.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Gaseosa Guarana 3Lts', 20.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Cerveza Corona">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/155843-600-600/Cerveza-Corona-Botellita-355-Ml-1-387.jpg?v=637345691047200000" alt="Cerveza Corona">
+                <h3>Cerveza Corona</h3>
+                <p class="price">$11.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Cerveza Corona', 11.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Nectar de Fruta">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156095-600-600/Nectar-De-Fruta-sabor-Durazno-Frut-All-1-Lt-1-469.jpg?v=637345693105700000" alt="Nectar de Fruta">
+                <h3>Nectar de Fruta</h3>
+                <p class="price">$8.90</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Nectar de Fruta', 8.90)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Cerveza Ice Lata">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156128-600-600/Cerveza-Ice-Lata-354-Ml-1-396.jpg?v=637345693277430000" alt="Cerveza Ice Lata">
+                <h3>Cerveza Ice Lata</h3>
+                <p class="price">$16.75</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Cerveza Ice Lata', 16.75)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Cerveza Huari Lata">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156131-600-600/Cerveza-Huari-Lata-354-Ml-1-395.jpg?v=637345693286800000" alt="Cerveza Huari Lata">
+                <h3>Cerveza Huari Lata</h3>
+                <p class="price">$13.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Cerveza Huari Lata', 13.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Cerveza Paceña">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156130-600-600/Cerveza-Pace-a-sin-Alcohol-Lata-354-Ml-1-394.jpg?v=637345693284300000" alt="Cerveza Paceña">
+                <h3>Cerveza Paceña</h3>
+                <p class="price">$17.40</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Cerveza Paceña', 17.40)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Cerveza Pilsener">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156120-600-600/Cerveza-Pace-a-Pilsener-Lata-473Ml-1-393.jpg?v=637345693166330000" alt="Cerveza Pilsener">
+                <h3>Cerveza Pilsener</h3>
+                <p class="price">$19.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Cerveza Pilsener', 19.00)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+   
+   </section>
+    
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> soporte@tienda.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad</p>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp-floating-button</title>
+        
+        
+        
+            <link rel="stylesheet" href="style.css">
+      
+        
+      </head>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+        
+        <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+
+
+
+
+      
+
+      <script src="script.js"></script>
+
+      <script>
+        // Función para realizar la búsqueda
+        function filterProducts(query) {
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.getAttribute("data-name").toLowerCase();
+                if (productName.includes(query.toLowerCase().trim())) {
+                    product.style.display = "block"; // Mostrar el producto si coincide
+                } else {
+                    product.style.display = "none"; // Ocultar el producto si no coincide
+                }
+            });
+        }
+
+        // Agregar evento de clic al botón de búsqueda
+        document.getElementById("search-button").addEventListener("click", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        // También puedes habilitar búsqueda en tiempo real mientras escribes
+        document.getElementById("search-input").addEventListener("input", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        
+    </script>
+
+      
+      <body>
+      
+     
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Estilizado</title>
+    <!-- Cargar Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="staly 1.css">
+</head>
+<body style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20211020/pngtree-hand-painted-watercolor-abstract-sky-blue-ink-background-image_912339.png);">
+
+    <header class="ro">
+        <div class="header-container d-flex justify-content-between align-items-center">
+            <!-- Logotipo -->
+            <div class="logo">
+               <a href="paginas.html">
+                    <img src="tienda.png" alt="Logo" style="height: 50px;"> 
+                </a>
+            </div>
+            <!-- Barra de búsqueda -->
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Busca productos..." />
+                <button id="search-button">Buscar</button>
+            </div>
+            
+
+            <nav>
+                <!-- Aquí va tu contenido del header -->
+                <div class="header-cart">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+            
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="nav-menu text-center mt-3">
+            <div class="dropdown">
+              <button class="dropdown-btn">Categorías</button>
+              <div class="dropdown-content">
+                    <a href="../paginas.html">Inicio</a>
+                  <a href="../carnes/carnes.html">Carnes</a>
+                  <a href="../bebidas/bebidas.html">Bebidas</a>
+              </div>
+          </div>
+          <button class="dropdown-btn"><a href="#catalogo">Catalogo</a></button>
+
+          <button class="dropdown-btn"><a href="#ofertas" class="mx-2">Ofertas</a></button> 
+          
+          <button class="dropdown-btn"><a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="mx-2">Contacto</a></button>
+          
+      </nav>
+    </header>
+   
+    <!-- Carrusel de imágenes (Principal) -->
+    <img src="https://pilandina.com.bo/wp-content/uploads/2024/08/Deslacto-Portada.webp" width="100%" height="400px">
+
+   
+   <section id="catalogo">
+    <header class="bro">
+        <h1>Catálogo Variedad De Lacteos</h1>
+    </header >
+
+    <!-- Cargar Bootstrap 5.3.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="product-list">
+            <div class="product" data-name="Leche Instantanea" data-price="10.00">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158177-600-600/Leche-Instantanea-Deslactosada-Pil-760-Gr-1-1962.jpg?v=637772457701530000" alt="Producto 1">
+                <h3>Leche Instantanea</h3>
+                <p class="price">$10.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Instantanea', 10.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche De Soya" data-price="12.50">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158186-600-600/Leche-de-Soya-sabor-Banana-Soy-946-Ml-1-1960.jpg?v=637772457729070000" alt="Producto 2">
+                <h3>Leche De Soya</h3>
+                <p class="price">$12.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche De Soya', 12.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche De Soya Chocolate" data-price="15.00">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158184-600-600/Leche-de-Soya-sabor-Chocolate-Soy-946-Ml-1-1958.jpg?v=637772457722800000" alt="Producto 3">
+                <h3>Leche De Soya Chocolate</h3>
+                <p class="price">$15.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche De Soya Chocolate', 15.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Evaporada" data-price="9.99">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156879-600-600/Leche-Evaporada-Bella-Holandesa-410-Gr-1-809.jpg?v=637369073919870000" alt="Producto 4">
+                <h3>Leche Evaporada</h3>
+                <p class="price">$9.99</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Evaporada', 9.99)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Crema De Leche" data-price="7.50">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156384-600-600/Crema-de-Leche-Pil-1-Lt-1-511.jpg?v=637345696256270000" alt="Producto 5">
+                <h3>Crema De Leche</h3>
+                <p class="price">$7.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Crema De Leche', 7.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Crema De Leche Delizzia" data-price="22.00">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156010-600-600/Crema-de-Leche-Delizia-500-Ml-1-510.jpg?v=637345691698300000" alt="Producto 6">
+                <h3>Crema De Leche Delizzia</h3>
+                <p class="price">$22.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Crema De Leche Delizzia', 22.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche De Soya Natural" data-price="18.25">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156341-600-600/Leche-de-Soya-Natural-Pil-946-Ml-1-508.jpg?v=637345694737030000" alt="Producto 7">
+                <h3>Leche De Soya Natural</h3>
+                <p class="price">$18.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche De Soya Natural', 18.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Chocolatada" data-price="14.30">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156376-600-600/Leche-Chocolatada-Pil-946-Ml-1-507.jpg?v=637345696235600000" alt="Producto 8">
+                <h3>Leche Chocolatada</h3>
+                <p class="price">$14.30</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Chocolatada', 14.30)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Soya De Frutilla" data-price="20.00">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158156-600-600/Leche-de-Soya-Sabor-Frutilla-Soy-946-Ml-1-506.jpg?v=637772457639970000" alt="Producto 9">
+                <h3>Soya De Frutilla</h3>
+                <p class="price">$20.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Soya De Frutilla', 20.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Deslactosada" data-price="11.50">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156345-600-600/Leche-Deslactosada-Tetra-Pil-1-Lt-1-504.jpg?v=637345694748300000" alt="Producto 10">
+                <h3>Leche Deslactosada</h3>
+                <p class="price">$11.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Deslactosada', 11.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Light" data-price="8.90">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156383-600-600/Leche-Light-Tetra-Pil-1-Lt-1-503.jpg?v=637345696253300000" alt="Producto 11">
+                <h3>Leche Light</h3>
+                <p class="price">$8.90</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Light', 8.90)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Deslactosada Light" data-price="16.75">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156349-600-600/Leche-Deslactosada-Light-Delizia-800-Ml-1-502.jpg?v=637345694759400000" alt="Producto 12">
+                <h3>Leche Deslactosada Light</h3>
+                <p class="price">$16.75</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Deslactosada Light', 16.75)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Deslactosada 800ml" data-price="13.25">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/156012-600-600/Leche-Deslactosada-Delizia-800-Ml-1-500.jpg?v=637345691703000000" alt="Producto 13">
+                <h3>Leche Deslactosada 800ml</h3>
+                <p class="price">$13.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Deslactosada 800ml', 13.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Leche Light Liviana" data-price="17.40">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158078-600-600/Leche-Light-Liviana-Pil-946-Ml-1-499.jpg?v=637731957717130000" alt="Producto 14">
+                <h3>Leche Light Liviana</h3>
+                <p class="price">$17.40</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Leche Light Liviana', 17.40)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+    
+   </section>
+    
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> soporte@tienda.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad</p>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+
+   
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp-floating-button</title>
+        
+        
+        
+            <link rel="stylesheet" href="style.css">
+      
+        
+      </head>
+      
+      <body>
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+        
+        <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+
+
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+      
+
+      <script src="script.js"></script>
+
+      <script>
+        // Función para realizar la búsqueda
+        function filterProducts(query) {
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.getAttribute("data-name").toLowerCase();
+                if (productName.includes(query.toLowerCase().trim())) {
+                    product.style.display = "block"; // Mostrar el producto si coincide
+                } else {
+                    product.style.display = "none"; // Ocultar el producto si no coincide
+                }
+            });
+        }
+
+        // Agregar evento de clic al botón de búsqueda
+        document.getElementById("search-button").addEventListener("click", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        // También puedes habilitar búsqueda en tiempo real mientras escribes
+        document.getElementById("search-input").addEventListener("input", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        
+    </script>
+
+
+
+
+
+
+
+
+
+      
+      </body>
+    
+
+    
+    
+</body>
+</html>
