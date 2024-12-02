@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Estilizado</title>
+    <!-- Cargar Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="staly 1.css">
+   
+</head>
+<body style="background-image: url(https://cdn.pixabay.com/photo/2021/11/19/15/21/christmas-6809681_640.png);">
+
+    <header class="ro">
+        <div class="header-container d-flex justify-content-between align-items-center">
+            <!-- Logotipo -->
+            <div class="logo">
+               <a href="paginas.html">
+                    <img src="tienda.png" alt="Logo" style="height: 50px;"> 
+                </a>
+            </div>
+            <!-- Barra de búsqueda -->
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Busca productos..." />
+                <button id="search-button">Buscar</button>
+            </div>
+            
+
+            <nav>
+                <!-- Aquí va tu contenido del header -->
+                <div class="header-cart">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+            
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="nav-menu text-center mt-3">
+         <div class="dropdown">
+                <button class="dropdown-btn">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="carnes/carnes.html">Carnes</a>
+                    <a href="lacteos/lacteos.html">Lacteos</a>
+                    <a href="bebidas/bebidas.html">Bebidas</a>
+                </div>
+            </div>
+            <button class="dropdown-btn"><a href="#catalogo">Catalogo</a></button>
+
+            <button class="dropdown-btn"><a href="#ofertas" class="mx-2">Ofertas</a></button> 
+            
+            <button class="dropdown-btn"><a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="mx-2">Contacto</a></button>
+            
+        </nav>
+    </header>
+   
+    <!-- Carrusel de imágenes (Principal) -->
+<section id="Ofertas"> 
+    <div style="padding: 0%;"id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://firebasestorage.googleapis.com/v0/b/hipermaxi-appmobile.appspot.com/o/BannerWeb%2Fcanastones%202024.jpeg?alt=media&token=dd761ad8-a511-4b05-80d7-908460e674c2" class="d-block w-100" alt="Producto 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://firebasestorage.googleapis.com/v0/b/hipermaxi-appmobile.appspot.com/o/BannerWeb%2FBanner-web-americanos.png?alt=media&token=86fdf541-b700-45a8-a6c5-ce3ec529cec8" class="d-block w-100" alt="Producto 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://firebasestorage.googleapis.com/v0/b/hipermaxi-appmobile.appspot.com/o/BannerWeb%2FBanner-web-De-cecco.png?alt=media&token=54270b44-4ba3-46f9-b227-aae761732cf0" class="d-block w-100" alt="Producto 3">
+            </div>
+        </div>
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    </section>
+
+   <section id="ofertas">
+    <!-- Carrusel de productos (Secundario) -->
+    <header class="sebastian">
+        <h1 >Catálogo de Ofertas!!</h1>
+    </header>
+
+  
+
+<div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselItems">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="row g-4" id="slide1">
+                <!-- Producto 1 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158387-600-600/Nectar-Manzana-Pura-Vida-Frutts-3-Lt-1-2187.jpg?v=637925709739030000" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pura Vida</h5>
+                            <p class="card-text">Nectar Manzana Pura Vida Frutts 3 Lt.</p>
+                            <p class="fw-bold">$25.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Pura Vida', 25.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158376-600-600/Cereal-Chocapic-Nestle-350-Gr-1-2181.jpg?v=637925709708630000" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocapic</h5>
+                            <p class="card-text">Cereal Chocapic Nestle 350 Gr.</p>
+                            <p class="fw-bold">$30.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Chocapic', 30.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158370-600-600/Insecticida-en-Spray-Multi-Raid-261-Gr-1-2178.jpg?v=637925709688300000" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Raid</h5>
+                            <p class="card-text">Insecticida en Spray Multi Raid 261 Gr.</p>
+                            <p class="fw-bold">$15.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Raid', 15.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="row g-4" id="slide2">
+                <!-- Producto 4 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158378-600-600/Chocolates-con-Almendras-Vizzio-Costa-182-Gr-1-2173.jpg?v=637925709713200000" class="card-img-top" alt="Producto 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Vizzio</h5>
+                            <p class="card-text">Chocolates con Almendras Vizzio Costa 182 Gr.</p>
+                            <p class="fw-bold">$40.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Vizzio', 40.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/158081-600-600/Papel-Higienico-Esencias-Doble-Hoja-Scott-24-Unds-Papel-Higi-nico-Esencias-Scott-24-Rollos-1-622.jpg?v=637731957726070000" class="card-img-top" alt="Producto 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Scoot</h5>
+                            <p class="card-text">Papel Higienico Doble Hoja Scott 24 Unds.</p>
+                            <p class="fw-bold">$50.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Scoot', 50.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
+                <div class="col-md-4 product-item">
+                    <div class="card">
+                        <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/155573-600-600/Sopa-de-pollo-Maruchan-64-Gr-1-94.jpg?v=637338812649300000" class="card-img-top" alt="Producto 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Maruchan</h5>
+                            <p class="card-text">Sopa de pollo Maruchan 64 Gr.</p>
+                            <p class="fw-bold">$60.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Maruchan', 60.00)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+    
+
+   </section>
+    
+   <img style="padding: 20px;" src="https://tubolsadepapel.com/wp-content/uploads/2018/12/promo-navidad.jpg" width="100%" height="500px">
+
+   <section id="catalogo">
+    <header class="bro">
+        <h1>Catálogo de Productos</h1>
+    </header >
+
+    <!-- Cargar Bootstrap 5.3.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="product-list">
+            <div class="product" data-name="Canasta Premiun">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=26e44f1_f2af_4249_8866_9ed184efa34d.jpg&co=5&size=400x400" alt="Canasta Premiun">
+                <h3>Canasta Premiun</h3>
+                <p class="price">$10.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Canasta Premiun', 10.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Canasta Estandar">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=2975683_6f7f_4855_a293_62893e97bb0e.jpg&co=5&size=400x400" alt="Canasta Estandar">
+                <h3>Canasta Estandar</h3>
+                <p class="price">$12.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Canasta Estandar', 12.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Canasta Normal">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=23e2621_4606_43eb_b9f0_2d0b41aab175.jpg&co=5&size=400x400" alt="Canasta Normal">
+                <h3>Canasta Normal</h3>
+                <p class="price">$15.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Canasta Normal', 15.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Canasta Economica">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=5016c18_ac3f_45c9_8526_c30c69d1da8f.jpg&co=5&size=400x400" alt="Canasta Economica">
+                <h3>Canasta Economica</h3>
+                <p class="price">$9.99</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Canasta Economica', 9.99)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paneton Banado Chocolate">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=9aa4ce3_dae6_497a_971e_e7c3725d00da.png&co=5&size=400x400" alt="Paneton Banado Chocolate">
+                <h3>Paneton Banado Chocolate</h3>
+                <p class="price">$7.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paneton Banado Chocolate', 7.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paneton Chocolate">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=5b8495a_ca6f_4465_be37_147694204024.jpg&co=5&size=400x400" alt="Paneton Chocolate">
+                <h3>Paneton Chocolate</h3>
+                <p class="price">$22.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paneton Chocolate', 22.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paneton Chocolatito">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=120a681_e4d7_4a5c_8511_a5380d6979ff.jpg&co=5&size=400x400" alt="Paneton Chocolatito">
+                <h3>Paneton Chocolatito</h3>
+                <p class="price">$18.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paneton Chocolatito', 18.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paneton Chispas de Chocolate">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=11a0795_7815_4bfc_a398_640473e26c03.jpg&co=5&size=400x400" alt="Paneton Chispas de Chocolate">
+                <h3>Paneton Chispas de Chocolate</h3>
+                <p class="price">$14.30</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paneton Chispas de Chocolate', 14.30)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Netscafe etiqueta roja">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=1cb523b_9d1d_4176_8224_182d84944165.JPG&co=5&size=400x400" alt="Netscafe etiqueta roja">
+                <h3>Netscafe etiqueta roja</h3>
+                <p class="price">$20.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Netscafe etiqueta roja', 20.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Netscafe etiqueta negra">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=598db71_0f5b_4e6e_830f_a15af04234f7.JPG&co=5&size=400x400" alt="Netscafe etiqueta negra">
+                <h3>Netscafe etiqueta negra</h3>
+                <p class="price">$11.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Netscafe etiqueta negra', 11.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Mayonesa">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=7c7ac9e_00b5_4d11_aaa9_92c3bc377955.JPG&co=5&size=400x400" alt="Mayonesa">
+                <h3>Mayonesa</h3>
+                <p class="price">$8.90</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Mayonesa', 8.90)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Choclo Enlatado">
+                <img src="https://apidos.hipermaxi.com//marketfile/ImageEcommerce?hashfile=84eb086_062c_4e3e_8d66_2111a5249c05.JPG&co=5&size=400x400" alt="Choclo Enlatado">
+                <h3>Choclo Enlatado</h3>
+                <p class="price">$16.75</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Choclo Enlatado', 16.75)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+    
+   </section>
+    
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> soporte@tienda.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad</p>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+
+
+
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp-floating-button</title>
+        
+        
+        
+            <link rel="stylesheet" href="style.css">
+      
+        
+      </head>
+      
+      <body>
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+        
+        <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+
+
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+      
+
+      <script src="script.js"></script>
+
+      <script>
+        // Función para realizar la búsqueda
+        function filterProducts(query) {
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.getAttribute("data-name").toLowerCase();
+                if (productName.includes(query.toLowerCase().trim())) {
+                    product.style.display = "block"; // Mostrar el producto si coincide
+                } else {
+                    product.style.display = "none"; // Ocultar el producto si no coincide
+                }
+            });
+        }
+
+        // Agregar evento de clic al botón de búsqueda
+        document.getElementById("search-button").addEventListener("click", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        // También puedes habilitar búsqueda en tiempo real mientras escribes
+        document.getElementById("search-input").addEventListener("input", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        
+    </script>
+
+
+
+
+
+
+
+
+
+      
+      </body>
+    
+</body>
+</html>

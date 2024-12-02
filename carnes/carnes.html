@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Estilizado</title>
+    <!-- Cargar Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="staly 1.css">
+</head>
+<body style="background-image: url(black.jpg);">
+
+    <header class="ro">
+        <div class="header-container d-flex justify-content-between align-items-center">
+            <!-- Logotipo -->
+            <div class="logo">
+               <a href="paginas.html">
+                    <img src="tienda.png" alt="Logo" style="height: 50px;"> 
+                </a>
+            </div>
+            <!-- Barra de búsqueda -->
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Busca productos..." />
+                <button id="search-button">Buscar</button>
+            </div>
+            
+
+            <nav>
+                <!-- Aquí va tu contenido del header -->
+                <div class="header-cart">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+            
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="nav-menu text-center mt-3">
+            <div class="dropdown">
+              <button class="dropdown-btn">Categorías</button>
+              <div class="dropdown-content">
+                  <a href="../paginas.html">Inicio</a>
+                  <a href="../lacteos/lacteos.html">Lacteos</a>
+                  <a href="../bebidas/bebidas.html">Bebidas</a>
+              </div>
+          </div>
+          <button class="dropdown-btn"><a href="#catalogo">Catalogo</a></button>
+
+          <button class="dropdown-btn"><a href="#ofertas" class="mx-2">Ofertas</a></button> 
+          
+          <button class="dropdown-btn"><a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="mx-2">Contacto</a></button>
+          
+      </nav>
+    </header>
+   
+    <!-- Carrusel de imágenes (Principal) -->
+    <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157799/1240X300_CARNE.jpg?v=637515861815770000" width="100%">
+
+   
+   <section id="catalogo">
+    <header class="bro">
+        <h1>Catálogo Variedad De Carnes</h1>
+    </header >
+
+    <!-- Cargar Bootstrap 5.3.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="product-list">
+            <div class="product" data-name="Chunchulines en Bandeja">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157540-600-600/Chunchulines-en-Bandeja-x-kg-1-1491.jpg?v=637417481082400000" alt="Producto 1">
+                <h3>Chunchulines en Bandeja</h3>
+                <p class="price">$10.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Chunchulines en Bandeja', 10.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Colita De Cuadril">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157552-600-600/Colita-de-Cuadril-Frigor-x-kg-1-1490.jpg?v=637417481114800000" alt="Producto 2">
+                <h3>Colita De Cuadril</h3>
+                <p class="price">$12.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Colita De Cuadril', 12.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Tira Costilla">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157538-600-600/Tira-Costilla-Especial-en-Bandeja-Frigor-x-kg-1-1488.jpg?v=637417481078330000" alt="Producto 3">
+                <h3>Tira Costilla</h3>
+                <p class="price">$15.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Tira Costilla', 15.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Tira Costilla Especial">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157536-600-600/Tira-de-Costilla-2Do-Corte-Frigor-x-kg-1-1486.jpg?v=637417481073800000" alt="Producto 4">
+                <h3>Tira Costilla Especial</h3>
+                <p class="price">$9.99</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Tira Costilla Especial', 9.99)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paneton Banado Chocolate">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157532-600-600/Punta-de-S-Colita-Cuadril-Frigor-x-kg-1-1482.jpg?v=637417481065370000" alt="Producto 5">
+                <h3>Paneton Banado Chocolate</h3>
+                <p class="price">$7.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paneton Banado Chocolate', 7.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Tira Costilla 2Do C.F">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157531-600-600/Punta-de-Costilla-Frigor-x-kg-1-1481.jpg?v=637417481063970000" alt="Producto 6">
+                <h3>Tira Costilla 2Do C.F</h3>
+                <p class="price">$22.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Tira Costilla 2Do C.F', 22.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Punta de S Colita">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157530-600-600/Bollo-Grande-Light-Frigor-en-Bandeja-x-kg-1-1480.jpg?v=637417481061130000" alt="Producto 7">
+                <h3>Punta de S Colita</h3>
+                <p class="price">$18.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Punta de S Colita', 18.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Punta De Costilla">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157529-600-600/Bollo-Grande-para-Bife-Frigor-x-kg-1-1479.jpg?v=637417481055200000" alt="Producto 8">
+                <h3>Punta De Costilla</h3>
+                <p class="price">$14.30</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Punta De Costilla', 14.30)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Bollo Grande">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157528-600-600/Bollo-Grande-Frigor-x-kg-1-1478.jpg?v=637417481053170000" alt="Producto 9">
+                <h3>Bollo Grande</h3>
+                <p class="price">$20.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Bollo Grande', 20.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Bollo Grande Frigor">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157527-600-600/Pollerita-Frigor-x-kg-1-1477.jpg?v=637417481050500000" alt="Producto 10">
+                <h3>Bollo Grande Frigor</h3>
+                <p class="price">$11.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Bollo Grande Frigor', 11.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Pollerita Frigor">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157527-600-600/Pollerita-Frigor-x-kg-1-1477.jpg?v=637417481050500000" alt="Producto 11">
+                <h3>Pollerita Frigor</h3>
+                <p class="price">$16.75</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Pollerita Frigor', 16.75)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Pecho KAwi">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157525-600-600/Pecho-KAwi-Frigor-en-Bandeja-x-kg-1-1475.jpg?v=637417481044400000" alt="Producto 13">
+                <h3>Pecho KAwi</h3>
+                <p class="price">$13.25</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Pecho KAwi', 13.25)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Pecho KAwi Frigor">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157523-600-600/Peceto-Whitu-Frigor-x-kg-1-1473.jpg?v=637417481038000000" alt="Producto 14">
+                <h3>Pecho KAwi Frigor</h3>
+                <p class="price">$17.40</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Pecho KAwi Frigor', 17.40)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paceto Whitu">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157522-600-600/Peceto-Rebanado-Frigor-en-Bandeja-x-kg-1-1472.jpg?v=637417481036600000" alt="Producto 15">
+                <h3>Paceto Whitu</h3>
+                <p class="price">$19.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paceto Whitu', 19.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Paceo Rebanado">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157521-600-600/Osobuco-Frigor-en-Bandeja-x-kg-1-1471.jpg?v=637417481034630000" alt="Producto 16">
+                <h3>Paceo Rebanado</h3>
+                <p class="price">$25.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Paceo Rebanado', 25.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Osobuco Frigor">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157519-600-600/Molida-para-Saice-Frigor-x-kg-1-1469.jpg?v=637417481031030000" alt="Producto 17">
+                <h3>Osobuco Frigor</h3>
+                <p class="price">$29.99</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Osobuco Frigor', 29.99)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Molida para Saice">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157518-600-600/Molida-Light-Frigor-Bandeja-x-kg-1-1468.jpg?v=637417481029800000" alt="Producto 18">
+                <h3>Molida para Saice</h3>
+                <p class="price">$30.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Molida para Saice', 30.00)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Molida Light">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157517-600-600/Molida-Especial-Frigor-en-Bandeja-x-kg-1-1467.jpg?v=637417481028400000" alt="Producto 19">
+                <h3>Molida Light</h3>
+                <p class="price">$35.50</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Molida Light', 35.50)">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Molida Especial">
+                <img src="https://icnorteb2c.vteximg.com.br/arquivos/ids/157515-600-600/Mata-Hambre-Rapi-Frigor-Bandeja-x-kg-1-1465.jpg?v=637417481024330000" alt="Producto 20">
+                <h3>Molida Especial</h3>
+                <p class="price">$40.00</p>
+                <button class="btn btn-primary w-100" onclick="addToCart('Molida Especial', 40.00)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+   </section>
+    
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> soporte@tienda.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad</p>
+            </div>
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tienda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+
+
+    
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp-floating-button</title>
+        
+        
+        
+            <link rel="stylesheet" href="style.css">
+      
+        
+      </head>
+      
+      <body>
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://wa.me/64965600?text=Hola,%20tengo%20una%20consulta%20sobre%20mis%20productos" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+        
+        <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+
+
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+</div>
+      
+
+      <script src="script.js"></script>
+
+      <script>
+        // Función para realizar la búsqueda
+        function filterProducts(query) {
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.getAttribute("data-name").toLowerCase();
+                if (productName.includes(query.toLowerCase().trim())) {
+                    product.style.display = "block"; // Mostrar el producto si coincide
+                } else {
+                    product.style.display = "none"; // Ocultar el producto si no coincide
+                }
+            });
+        }
+
+        // Agregar evento de clic al botón de búsqueda
+        document.getElementById("search-button").addEventListener("click", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        // También puedes habilitar búsqueda en tiempo real mientras escribes
+        document.getElementById("search-input").addEventListener("input", () => {
+            const query = document.getElementById("search-input").value;
+            filterProducts(query);
+        });
+
+        
+    </script>
+
+
+
+
+
+
+
+
+
+      
+      </body>
+    
+
+    
+</body>
+</html>
